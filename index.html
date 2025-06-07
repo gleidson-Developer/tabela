@@ -235,7 +235,13 @@
             transform: scale(1.1);
         }
 
-    
+        .tips-container {
+            margin: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #2e8b57;
+        }
 
         .tips-title {
             font-weight: bold;
@@ -292,7 +298,10 @@
                 font-size: 0.85em;
             }
 
-            
+            .tips-container {
+                margin: 15px;
+                padding: 15px;
+            }
         }
     </style>
 </head>
@@ -448,11 +457,22 @@
             </table>
         </div>
 
+        <div class="tips-container">
+            <div class="tips-title">Configuração Google Sheets</div>
+            <div class="tips-content">
+                <ul>
+                    <li>Configure sua <span class="formula-highlight">APPS_SCRIPT_URL</span> no JavaScript abaixo para conectar ao Google Sheets.</li>
+                    <li>Use o botão <span class="formula-highlight">(+)</span> no cabeçalho para adicionar novas linhas à planilha.</li>
+                    <li>Clique em <span class="actions-highlight">💾 Salvar</span> para enviar todos os dados para o Google Sheets.</li>
+                    <li>Passe o mouse sobre uma linha para ver o botão de exclusão (×).</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <script>
         // ⚠️ CONFIGURE SUA URL DO GOOGLE APPS SCRIPT AQUI
-        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwM21Y08EhGOyOSwlxRhflUUuAGMPCFSV5Cotb4vn8ilzD6uEje6Q3jddhBufsm-9ftzg/exec';
+        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/SEU_SCRIPT_ID_AQUI/exec';
 
         function addRow() {
             const tableBody = document.getElementById('tableBody');
